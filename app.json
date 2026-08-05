@@ -1,0 +1,23 @@
+{
+  "name": "Midnight",
+  "description": "All-in-one Telegram bot: music/VC, admin, economy, casino, AI, anime, theme, sudo",
+  "repository": "https://github.com/yourusername/midnight-bot",
+  "keywords": ["telegram", "bot", "pyrogram", "music"],
+  "env": {
+    "API_ID": { "description": "From https://my.telegram.org", "required": true },
+    "API_HASH": { "description": "From https://my.telegram.org", "required": true },
+    "BOT_TOKEN": { "description": "From @BotFather", "required": true },
+    "STRING_SESSION": { "description": "Pyrogram userbot session string for the voice-chat assistant account", "required": true },
+    "OWNER_ID": { "description": "Your numeric Telegram user ID", "required": true },
+    "SUDO_USERS": { "description": "Comma-separated user IDs with sudo access", "required": false },
+    "ANTHROPIC_API_KEY": { "description": "Optional, only needed for /ask", "required": false },
+    "DB_PATH": { "description": "SQLite file path", "value": "midnight_bot.db", "required": false }
+  },
+  "buildpacks": [
+    { "url": "heroku-community/apt" },
+    { "url": "heroku/python" }
+  ],
+  "formation": {
+    "worker": { "quantity": 1, "size": "eco" }
+  }
+}
