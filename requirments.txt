@@ -1,0 +1,6 @@
+pyrofork
+TgCrypto-pyrofork
+py-tgcalls
+yt-dlp
+python-dotenv==1.0.1
+httpx==0.27.2
